@@ -1,0 +1,137 @@
+body {
+    background-color: #0a2a4a; /* نفس الثيم */
+    font-family: 'Cairo', sans-serif;
+}
+
+.forgot-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lang-switch-login .btn {
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 3px 10px;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.forgot-box {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    width: 380px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.forgot-logo {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.forgot-title {
+    font-weight: 700;
+    color: #0a2a4a;
+}
+
+.forgot-text {
+    color: #0a2a4a;
+    font-size: 15px;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #0a2a4a;
+}
+
+.forgot-btn {
+    background-color: #0a2a4a;
+    color: #ffffff;
+    border-radius: 25px;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.forgot-btn:hover {
+    background-color: #123b6b;
+}
+
+.back-link {
+    color: #0a2a4a;
+    font-size: 14px;
+}
+
+/* RTL دعم */
+html[dir="rtl"] body {
+    text-align: right;
+}
+
+body {
+    position: relative;
+    background-image: url('../img/pattern.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: rotateBg 90s linear infinite;
+}
+
+body {
+    position: relative;
+    background-image: url('../img/pattern.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    animation: rotateBg 90s linear infinite; /* الحركة تبقى */
+}
+
+/* طبقة تغميق + ضبابية خفيفة */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45); /* زيدي الرقم للتغميق */
+    backdrop-filter: blur(2px); /* ضبابية خفيفة */
+    z-index: 0;
+}
+
+/* عشان النموذج يكون فوق الطبقة */
+.login-container,
+.forgot-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* الحركة الدائرية */
+@keyframes rotateBg {
+    0% { background-position: 0 0; }
+    25% { background-position: 50px 50px; }
+    50% { background-position: 100px 0; }
+    75% { background-position: 50px -50px; }
+    100% { background-position: 0 0; }
+}
+
+.back-home-btn {
+    position: absolute;
+    top: 20px;
+    /* الافتراضي للإنجليزية */
+    left: 20px; 
+    color: #ffffff;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(4px);
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+/* عندما تكون اللغة عربية (RTL) */
+html[dir="rtl"] .back-home-btn {
+    left: auto;
+    right: 20px;
+}

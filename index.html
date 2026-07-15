@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>إيوان المنورة للمقاولات العامة</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg main-nav fixed-top">
+    <div class="container-fluid">
+
+        <!-- Logo + Name -->
+        <a class="navbar-brand d-flex align-items-center" href="#home">
+            <img src="public/img/company.png" class="nav-logo" alt="إيوان المنورة">
+            <span class="brand-text" data-text-ar="إيوان المنورة" data-text-en="Iwan Al-Munawara">إيوان المنورة</span>
+        </a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 nav-links">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home" data-text-ar="الرئيسية" data-text-en="Home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about" data-text-ar="نبذة عنا" data-text-en="About us">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services" data-text-ar="خدماتنا" data-text-en="Our services">Our services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#company-info" data-text-ar="معلومات الشركة" data-text-en="Company Info">Company Info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Sign in / Log in</a>
+                </li>
+
+                <!-- ⭐ زر تسجيل خروج العميل (يظهر فقط إذا العميل مسجل دخول) -->
+                <li class="nav-item" id="clientLogoutBtn" style="display:none;">
+                    <button class="btn btn-danger btn-sm">تسجيل خروج</button>
+                </li>
+
+            </ul>
+
+            <!-- Language Switch -->
+            <div class="ms-3 lang-switch">
+                <button class="btn btn-sm btn-outline-light me-1" id="btn-ar">AR</button>
+                <button class="btn btn-sm btn-outline-light" id="btn-en">EN</button>
+            </div>
+        </div>
+    </div>
+</nav>
+Ewan
+<!-- HERO SECTION -->
+<section id="home" class="hero-section d-flex align-items-center">
+    <div class="container hero-content">
+        <div class="row">
+            <div class="col-lg-7 text-box">
+                <h1 class="hero-title"
+                    data-text-ar="إيوان المنورة للمقاولات العامة"
+                    data-text-en="Iwan Al-Munawara General Contracting">
+                    إيوان المنورة للمقاولات العامة
+                </h1>
+                <p class="hero-sub"
+                   data-text-ar="شركة إيوان المنورة هي شركة سعودية ذات مسؤولية محدودة تعمل في مجال المقاولات العامة ."
+                   data-text-en="A Saudi company providing general contracting services with a formal and professional character, adhering to modern engineering standards and quality execution.">
+                    شركة سعودية تقدم خدمات المقاولات العامة بطابع رسمي واحترافي، مع الالتزام بالمعايير الهندسية الحديثة وجودة التنفيذ.
+                </p>
+                <a href="form.html" class="btn hero-btn"
+                   data-text-ar="اطلب استشارة الآن"
+                   data-text-en="Request a consultation now">
+                   اطلب استشارة الآن
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="section bg-white">
+    <div class="container">
+        <h2 class="section-title">
+            <span data-text-ar="نبذة عن الشركة" data-text-en="About The Company">About The Company</span>
+        </h2>
+        <p class="section-text"
+           data-text-ar="شركة إيوان المنورة للمقاولات العامة تهدف إلى تقديم حلول إنشائية متكاملة بجودة عالية مع الالتزام بالأنظمة واللوائح المعتمدة في المملكة العربية السعودية."
+           data-text-en="Iwan Al-Madinah General Contracting Company aims to provide complete construction solutions with high quality while adhering to the approved regulations and laws in Saudi Arabia.">
+            شركة إيوان المنورة للمقاولات العامة هي شركة ذات مسؤولية محدودة تعمل في مجال المقاولات العامة، وتهدف إلى تقديم حلول إنشائية متكاملة بجودة عالية مع الالتزام بالأنظمة واللوائح المعتمدة في المملكة العربية السعودية.
+        </p>
+    </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services" class="section services-section">
+    <div class="container">
+        <h2 class="section-title text-center">
+            <span data-text-ar="خدماتنا" data-text-en="Our Services">Our Services</span>
+        </h2>
+
+        <div class="row mt-4 justify-content-center">
+
+            <!-- أعمال العظم -->
+            <div class="col-md-4 mb-4 d-flex justify-content-center">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+
+                        <!-- FRONT -->
+                        <div class="flip-card-front service-front">
+                            <i class="bi bi-building main-icon"></i>
+                            <h4>أعمال العظم الهيكلية</h4>
+                        </div>
+
+                        <!-- BACK -->
+                        <div class="flip-card-back service-back">
+                            <p>
+                                تنفيذ بناء الفلل والعمائر السكنية من مرحلة الحفر وحتى السقف وفق المعايير الهندسية المعتمدة
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- أعمال التشطيبات -->
+            <div class="col-md-4 mb-4 d-flex justify-content-center">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+
+                        <div class="flip-card-front service-front">
+                            <i class="bi bi-brush main-icon"></i>
+                            <h4>أعمال التشطيبات</h4>
+                        </div>
+
+                        <div class="flip-card-back service-back">
+                            <p>
+                                تشمل اللياسة، البلاط، السباكة، الكهرباء، والدهانات بجودة عالية ومعايير تنفيذ دقيقة
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- الترميم والتطوير -->
+            <div class="col-md-4 mb-4 d-flex justify-content-center">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+
+                        <div class="flip-card-front service-front">
+                            <i class="bi bi-tools main-icon"></i>
+                            <h4>الترميم والتطوير</h4>
+                        </div>
+
+                        <div class="flip-card-back service-back">
+                            <p>
+                                تحديث المباني القائمة وإعادة تصميم المساحات الداخلية والخارجية بما يتناسب مع احتياجات العميل
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- COMPANY INFO -->
+<div id="company-info" class="company-info-wrapper">
+    <div class="col-md-6 mb-4">
+
+        <h2 class="section-title text-white">
+            <span data-text-ar="معلومات الشركة" data-text-en="Company Info">Company Info</span>
+        </h2>
+
+        <p class="text-white">
+            <strong data-text-ar="شركة إيوان المنورة للمقاولات العامة"
+                    data-text-en="Iwan Al-Madinah General Contracting">
+                شركة إيوان المنورة للمقاولات العامة
+            </strong>
+        </p>
+
+        <p class="text-white">
+            <span data-text-ar="السجل التجاري: 7054437376"
+                  data-text-en="Commercial Registration: 7054437376">
+                السجل التجاري: 7054437376
+            </span>
+        </p>
+
+        <p class="text-white">
+            <span data-text-ar="حالة السجل: نشط"
+                  data-text-en="Registration Status: Active">
+                حالة السجل: نشط
+            </span>
+        </p>
+
+        <h3 class="mt-4 section-subtitle text-white">
+            <span data-text-ar="العنوان الوطني" data-text-en="National Address">National Address</span>
+        </h3>
+
+        <p class="text-white"
+           data-text-ar="مبنى رقم 3546، شارع موسى بن أبي موسى الأشعري، حي الملك فهد، المدينة المنورة، 42366، المملكة العربية السعودية."
+           data-text-en="Building No. 3546, Musa bin Abi Musa Al-Ash'ari Street, King Fahd District, Madinah, 42366, Saudi Arabia.">
+            مبنى رقم 3546، شارع موسى بن أبي موسى الأشعري، حي الملك فهد، المدينة المنورة، 42366، المملكة العربية السعودية.
+        </p>
+
+    </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer class="footer text-center">
+    <p data-text-ar="© جميع الحقوق محفوظة لشركة إيوان المنورة للمقاولات العامة"
+       data-text-en="© All rights reserved for Iwan Al-Madinah General Contracting">
+        © جميع الحقوق محفوظة لشركة إيوان المنورة للمقاولات العامة
+    </p>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="public/js/language.js"></script>
+
+<!-- ⭐ سكربت زر تسجيل خروج العميل -->
+<script>
+// إظهار زر تسجيل خروج فقط إذا العميل مسجل دخول
+if (localStorage.getItem("clientLoggedIn") === "true") {
+    document.getElementById("clientLogoutBtn").style.display = "block";
+}
+
+// وظيفة تسجيل خروج العميل
+document.getElementById("clientLogoutBtn").addEventListener("click", function() {
+    localStorage.removeItem("clientLoggedIn");
+    window.location.href = "index.html";
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title data-text-ar="نموذج الطلب " data-text-en=" Request Form">نموذج الطلب </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="public/css/style.css">
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg main-nav fixed-top">
+    <div class="container-fluid">
+
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="public/img/company.png" class="nav-logo" alt="Logo">
+            <span class="brand-text" data-text-ar="إيوان المنورة" data-text-en="Iwan Al-Madinah">إيوان المنورة</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 nav-links">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" data-text-ar="الرئيسية" data-text-en="Home">الرئيسية</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#about" data-text-ar="نبذة عنا" data-text-en="About us">نبذة عنا</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#services" data-text-ar="خدماتنا" data-text-en="Our services">خدماتنا</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#company-info" data-text-ar="معلومات الشركة" data-text-en="Company Info">معلومات الشركة</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html" data-text-ar="تسجيل الدخول" data-text-en="Sign in / Log in">تسجيل الدخول</a>
+                </li>
+
+                <!-- زر تسجيل خروج العميل (يظهر فقط إذا العميل مسجل دخول) -->
+                <li class="nav-item" id="clientLogoutBtn" style="display:none;">
+                    <button class="btn btn-danger btn-sm">تسجيل خروج</button>
+                </li>
+
+                <li class="nav-item lang-switch">
+                    <button class="btn btn-sm btn-outline-light me-1" id="btn-ar">AR</button>
+                    <button class="btn btn-sm btn-outline-light" id="btn-en">EN</button>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<!-- FORM SECTION -->
+<section id="form-section" class="hero-section form-page d-flex justify-content-center align-items-start">
+
+    <div class="card p-4 shadow-lg"
+         style="max-width: 500px; width: 100%; border-radius: 18px;
+                background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); margin-top: 120px;">
+
+        <h2 class="text-center mb-4" 
+            style="color: #fff; font-weight: 700;"
+            data-text-ar="نموذج الطلب"
+            data-text-en="Request Form">
+            نموذج الطلب 
+        </h2>
+
+        <form id="requestForm">
+
+            <!-- الاسم الكامل -->
+            <div class="mb-3">
+                <label class="form-label" style="color: #fff;"
+                       data-text-ar="الاسم الكامل" data-text-en="Full Name">الاسم الكامل</label>
+                <input type="text" class="form-control" name="fullName" placeholder="اكتب اسمك الكامل هنا" required>
+            </div>
+            
+            <!-- رقم الجوال -->
+            <div class="mb-3">
+                <label class="form-label" style="color: #fff;"
+                       data-text-ar="رقم الجوال" data-text-en="Phone Number">رقم الجوال</label>
+                <input type="tel" class="form-control" name="phone" placeholder="05xxxxxxxx" required>
+            </div>
+
+            <!-- البريد الإلكتروني -->
+            <div class="mb-3">
+                <label class="form-label" style="color: #fff;"
+                       data-text-ar="البريد الإلكتروني" data-text-en="Email">البريد الإلكتروني</label>
+                <input type="email" class="form-control" name="email" placeholder="example@email.com" required>
+            </div>
+
+            <!-- نوع المشروع -->
+            <div class="mb-3">
+                <label class="form-label" style="color: #fff;"
+                       data-text-ar="نوع المشروع" data-text-en="Project Type">نوع المشروع</label>
+                <select class="form-control" name="projectType" required>
+                    <option value="" disabled selected data-text-ar="اختر نوع المشروع" data-text-en="Select project type">
+                        اختر نوع المشروع
+                    </option>
+                    <option value="عظم" data-text-ar="عظم" data-text-en="Structure">عظم</option>
+                    <option value="تشطيب" data-text-ar="تشطيب" data-text-en="Finishing">تشطيب</option>
+                    <option value="ترميم" data-text-ar="ترميم" data-text-en="Renovation">ترميم</option>
+                </select>
+            </div>
+
+            <!-- مساحة الأرض -->
+            <div class="mb-3">
+                <label class="form-label" style="color: #fff;"
+                       data-text-ar="مساحة الأرض (م²)" data-text-en="Land Area (m²)">مساحة الأرض (م²)</label>
+                <input type="number" class="form-control" name="landArea" placeholder="مثال: 300" required>
+            </div>
+
+            <!-- موقع المشروع -->
+            <div class="mb-3">
+                <label class="form-label" style="color: #fff;"
+                       data-text-ar="موقع المشروع" data-text-en="Project Location">موقع المشروع</label>
+                <input type="text" class="form-control" name="location" placeholder="المدينة - الحي - الشارع">
+            </div>
+
+            <!-- وصف إضافي -->
+            <div class="mb-3">
+                <label class="form-label" style="color: #fff;"
+                       data-text-ar="وصف إضافي (اختياري)" data-text-en="Additional Notes (Optional)">
+                    وصف إضافي (اختياري)
+                </label>
+                <textarea class="form-control" name="notes" rows="3" 
+                          placeholder="اكتب أي تفاصيل إضافية ترغب بإضافتها"></textarea>
+            </div>
+
+            <!-- زر الإرسال -->
+            <button type="submit" class="btn hero-btn w-100"
+                    data-text-ar="إرسال الطلب" data-text-en="Submit Request">
+                إرسال الطلب
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="public/js/language.js"></script>
+
+<!-- SweetAlert + إرسال الطلب -->
+<script>
+document.getElementById("requestForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const data = {
+        fullName: this.fullName.value,
+        phone: this.phone.value,
+        email: this.email.value,
+        projectType: this.projectType.value,
+        landArea: this.landArea.value,
+        location: this.location.value,
+        notes: this.notes.value
+    };
+
+    fetch("http://localhost:3000/submit-request", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+
+    .then(res => res.json())
+    .then(data => {
+        Swal.fire({
+            icon: "success",
+            title: "تم إرسال الطلب",
+            text: "شكرًا لك! تم استلام طلبك بنجاح.",
+            confirmButtonText: "حسناً"
+        });
+
+        this.reset();
+    })
+    .catch(err => {
+        Swal.fire({
+            icon: "error",
+            title: "خطأ",
+            text: "حدث خطأ أثناء إرسال الطلب. حاول مرة أخرى.",
+        });
+    });
+});
+</script>
+
+<!-- زر تسجيل خروج العميل -->
+<script>
+// إظهار زر تسجيل خروج فقط إذا العميل مسجل دخول
+if (localStorage.getItem("clientLoggedIn") === "true") {
+    document.getElementById("clientLogoutBtn").style.display = "block";
+}
+
+// وظيفة تسجيل خروج العميل
+document.getElementById("clientLogoutBtn").addEventListener("click", function() {
+    localStorage.removeItem("clientLoggedIn");
+    window.location.href = "index.html";
+});
+</script>
+
+</body>
+</html>
